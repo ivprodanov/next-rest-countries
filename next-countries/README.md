@@ -9,6 +9,6 @@ npm i
 Then run the project with:
 
 ```bash
-npm i
+npm run dev
 ```
 
