@@ -14,17 +14,6 @@ export default function ThemeContextWrapper(props) {
   }
 
   console.log(theme)
-  // useEffect(() => {
-  //   switch (theme) {
-  //     case themes.light:
-  //       setTheme(themes.light)
-  //       break;
-  //     case themes.dark:
-  //     default:
-  //       setTheme(themes.dark)
-  //       break;
-  //   }
-  // }, [theme]);
 
   return (
     <ThemeContext.Provider value={{ theme: theme, changeTheme: changeTheme, setIsDark: setIsDark }}>

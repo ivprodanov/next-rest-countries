@@ -2,9 +2,7 @@ import React, {useState, useContext} from "react";
 import CountryCard from "../components/Card/Card";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
-import SearchBar from "../components/SearchBar/SearchBar";
 import { Link, OutlinedInput, Stack } from "@mui/material";
-import FilterDropdown from "../components/Filter/FilterDropdown";
 import FormControl from '@mui/material/FormControl';
 import SearchIcon from '@mui/icons-material/Search';
 import InputAdornment from '@mui/material/InputAdornment';
@@ -38,7 +36,6 @@ const Container = ({countries}) => {
   return (
     <React.Fragment>
       <Stack direction="row" justifyContent="space-between" m={3}>
-        {/* <SearchBar /> */}
         <FormControl sx={{ m: 1, width: '33vw' }} variant="outlined" style={{backgroundColor: theme.elements}}>
           <OutlinedInput
             style={{color: theme.text}}
@@ -54,7 +51,6 @@ const Container = ({countries}) => {
             }}
           />
         </FormControl>
-        {/* <FilterDropdown /> I didn't have time to implement the logic for this one.. */}
       </Stack>
       <Box sx={{ flexGrow: 1 }} m={4} >
         <Grid container spacing={2}>

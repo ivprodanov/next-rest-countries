@@ -103,30 +103,32 @@ function CountryPage({ country }) {
             <Typography>
               <b>Currencies:</b>{" "}
               {country.currencies.map((curr) => {
-                return <span>{curr.name}</span>;
+                return <span key={curr.name}>{curr.name}</span>;
               })}
             </Typography>
             <Typography>
               <b>Languages:</b>{" "}
               <span>
                 {country.languages.map((lang) => (
-                  <span>{lang.name} </span>
+                  <span key={lang.name}>{lang.name} </span>
                 ))}
               </span>
             </Typography>
           </Grid>
         </Grid>
 
+        {borders && 
         <Grid item xs={12} p={2} mt={5}>
           <Typography>
             <b>Border Countries:</b>{" "}
             {borders !== undefined ? borders.map((cntr) => (
-              <Link href={`/country/${cntr.alpha3Code}`}>
+              <Link key={cntr.alpha3Code} href={`/country/${cntr.alpha3Code}`}>
                 <Button>{cntr.name}</Button>
               </Link>
             )) : 'Loading...'}
           </Typography>
         </Grid>
+        }
       </Grid>
     </Grid>
     </React.Fragment>
